@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+        font-family: 'Palatino', serif;
+        background: linear-gradient(135deg, #d97706, #b45309);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        }
+
+        form {
+            background: linear-gradient(145deg, #fef3c7, #fde68a);
+            padding: 30px;
+            border-radius: 20px;
+            width: 350px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+            border: 3px solid #92400e;
+        }
+
+        fieldset {
+            border: 3px solid #92400e;
+            border-radius: 15px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        legend {
+            color: #92400e;
+            font-weight: bold;
+            font-size: 18px;
+            font-family: 'Georgia', serif;
+            padding: 0 15px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            color: #78350f;
+            font-weight: bold;
+            font-size: 14px;
+            font-family: 'Arial', sans-serif;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px;
+            margin-bottom: 15px;
+            border: 2px solid #f59e0b;
+            border-radius: 8px;
+            background-color: #fefce8;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        input:focus, select:focus {
+            border-color: #d97706;
+            background-color: #fef3c7;
+            box-shadow: 0 0 10px rgba(217, 119, 6, 0.3);
+            outline: none;
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(45deg, #d97706, #b45309);
+            color: white;
+            padding: 15px 25px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            font-weight: bold;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(45deg, #b45309, #92400e);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: #78350f;
+            text-align: center;
+            font-family: 'Brush Script MT', cursive;
+            font-size: 28px;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+    </style>
+</head>
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="post" style="text-align: center;">
+        <fieldset>
+            <legend>User Information</legend>
+            <h1>User Registration Form</h1>
+            <table style="margin-left: auto; margin-right: auto;">
+                <tr>
+                    <td><label for="name">Name:</label></td>
+                    <td><input type="text" id="name" name="name" required></td>
+                </tr>
+                <tr>
+                    <td><label for="email">Email:</label></td>
+                    <td><input type="email" id="email" name="email" required></td>
+                </tr>
+                <tr>
+                    <td><label for="age">Age:</label></td>
+                    <td><input type="number" id="age" name="age" required></td>
+                </tr>
+                <tr>
+                    <td><label for="course">Course:</label></td>
+                    <td>
+                        <select id="course" name="course" required>
+                            <option value="BE">BE</option>
+                            <option value="MCA">MCA</option>
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="M.Tech">M.Tech</option>
+                        </select>
+                    </td>
+                </tr>
+            </table>
+        <input type="submit" value="Register">
+        </fieldset>
+    </form>
+</body>
+</html>
