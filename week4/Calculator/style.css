@@ -1,0 +1,99 @@
+body{
+    font-family:'Inter',sans-serif;
+    background-color: aliceblue;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 1rem;
+    margin:0;
+    box-sizing: border-box;
+}
+.calculator {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border-radius: 1rem;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    padding: 1.5rem;
+}
+.display {
+    width: 100%;
+    height: 4rem;
+    padding: 1rem;
+    text-align: right;
+    font-size: 2.25rem;
+    background-color: #e5e7eb;
+    border-radius: 0.5rem;
+    border: none;
+    margin-bottom: 1.5rem;
+    outline: none;
+}
+
+.calculator-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.calculator-button {
+    padding: 1.5rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: 0.5rem;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.calculator-button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+}
+
+/* Operator buttons */
+.operator {
+    background-color: #3b82f6;
+    color: #ffffff;
+}
+.operator:hover { background-color: #2563eb; }
+.operator:active { background-color: #1e40af; }
+
+/* Clear button */
+.clear {
+    grid-column: span 2;
+    background-color: #ef4444;
+    color: #ffffff;
+}
+.clear:hover { background-color: #dc2626; }
+.clear:active { background-color: #b91c1c; }
+
+/* Equals button */
+.equals {
+    background-color: #22c55e;
+    color: #ffffff;
+}
+.equals:hover { background-color: #16a34a; }
+.equals:active { background-color: #15803d; }
+
+/* Number/Decimal buttons */
+.number {
+    background-color: #e5e7eb;
+    color: #1f2937;
+}
+.number:hover { background-color: #d1d5db; }
+.number:active { background-color: #9ca3af; }
+
+/* Backspace button */
+.backspace {
+    background-color: #d1d5db;
+    color: #1f2937;
+}
+.backspace:hover { background-color: #9ca3af; }
+.backspace:active { background-color: #6b7280; }
+
+/* Zero button */
+.zero {
+    grid-column: span 2;
+}
