@@ -1,37 +1,22 @@
-import './App.css'
+import { useState } from 'react';
+import './App.css';
 
-/**
- * A component to display user details.
- * It receives `username` and `details` as props.
- * Using object destructuring in the function signature is a common pattern.
- */
-function UserDetails({ username, details }) {
+function App() {
+  const [likes, setLikes] = useState(0);
+
+  const increment = () => setLikes(likes + 1);
+  const decrement = () => setLikes(likes > 0 ? likes - 1 : 0); // prevent negative
+  const reset = () => setLikes(0);
+
   return (
-    <div className="user-card">
-      <h2>{username}</h2>
-      <p>{details}</p>
+    <div className="app-container">
+      <h1>Like Counter</h1>
+      <p>Likes: {likes}</p>
+      <button onClick={increment}>+ Like</button>
+      <button onClick={decrement}>- Unlike</button>
+      <button onClick={reset}>Reset</button>
     </div>
   );
 }
 
-function App() {
-  // An array of user objects to display
-  const users = [
-    { id: 1, name: 'Sarvesh', info: 'A passionate developer learning React.' },
-    { id: 2, name: 'Jane Doe', info: 'A front-end expert and UI designer.' },
-    { id: 3, name: 'John Smith', info: 'Loves hiking and photography.' }
-  ];
-  return (
-    <div className="app-container">
-      <h1>User Profiles</h1>
-      <div className="user-list">
-        {/* We map over the users array to render a UserDetails component for each user */}
-        {users.map(user => (
-          <UserDetails key={user.id} username={user.name} details={user.info} />
-        ))}
-      </div>
-    </div>
-  )
-}
-
-export default App
+export default App;
