@@ -2,21 +2,24 @@ import { useState } from 'react';
 import './App.css';
 
 function App() {
-  const [likes, setLikes] = useState(0);
+  const [count, setCount] = useState(0);
 
-  const increment = () => setLikes(likes + 1);
-  const decrement = () => setLikes(likes > 0 ? likes - 1 : 0); // prevent negative
-  const reset = () => setLikes(0);
-
+  const increment = () => setCount(count + 1);
+  const decrement = () => setCount(count - 1); // prevent negative
+  const wholeSqaure = () => setCount(count * count);
+  const reset = () => setCount(0);
+  
   return (
     <div className="app-container">
-      <h1>Like Counter</h1>
-      <p>Likes: {likes}</p>
-      <button onClick={increment}>+ Like</button>
-      <button onClick={decrement}>- Unlike</button>
+      <h1> Counter</h1>
+      <p>Count: {count}</p>
+      <button onClick={increment}>+ increment</button>
+      <button onClick={decrement}>- decrement</button>
+      <button onClick={ wholeSqaure}>whole square</button>
       <button onClick={reset}>Reset</button>
     </div>
   );
 }
 
 export default App;
+ 
